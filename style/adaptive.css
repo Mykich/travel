@@ -171,9 +171,8 @@
     .top__card{
         grid-column: span 6;
     }
-    
     .footer__item{
-        width: 100%;
+        padding-top: 10px;
     }
    
     .footer__menu-items{
@@ -182,7 +181,11 @@
         gap: 30px;
        
     }
-    .videos{
-         margin-bottom: 30px;
+    .footer{
+        margin-bottom: 200px;
     }
+    .videos{
+        margin-bottom: 30px;
+    }
+   
 }
