@@ -145,7 +145,7 @@
     }
 
     .top{
-        margin-bottom:80x;
+        margin-bottom:30px;
     }
     .guids{
         margin-bottom:20px;
@@ -171,6 +171,7 @@
     .top__card{
         grid-column: span 6;
     }
+    
     .footer__item{
         width: 100%;
     }
