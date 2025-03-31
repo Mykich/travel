@@ -1,0 +1,184 @@
+
+/*header end*/
+
+@media  (max-width:960px) {
+    .header{
+        padding: 0;
+    }
+    
+    .benefits{
+        margin-bottom: 50px;
+    }
+    .benefits__card {
+        margin-bottom: 55px;
+    }
+
+    .benefits__cards{
+        padding: 0 15px;
+        grid-column-gap: 35px;
+    }
+    .benefits__title{
+        padding: 50px 15px;
+    }
+    .benefits__wrapper{
+        box-shadow: none;
+    }
+    .places__card-top{
+        grid-column: span 6;
+    }
+    .places__card-buttom{
+        grid-column: span 6;
+    }
+    .guide__goide{
+        gap: 35px;
+    }
+    .guide__info{
+        padding-left: 0;
+    }
+    .guide__title{
+        margin-bottom: 15px;
+    }
+    .guide__text{
+        margin-bottom: 15px;
+    }
+    .top__card{
+        grid-column: span 3;
+
+    }
+    .top__cards{
+        gap: 55px;
+    }
+    .top__card-pic{
+        margin-bottom: 25px;
+    }
+    .footer__logo-pic{
+        margin-bottom: 75px;
+    }
+    .footer{
+        padding: 55px 0;
+    }
+}
+
+/*header start*/
+@media (max-width:767px) {
+    .wrapper__full{
+        padding: 0 15px;
+    }
+    .header{
+        padding-bottom: 20px;
+    }
+    .header__burger{
+        display: block;
+    }
+        
+    .header__nav{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: black;
+        z-index: 10;
+        padding: 75px;
+        transform: translateX(100%);
+        transition: .2s linear;
+    }
+    .header__nav-activ{
+        transform: translateX(0%);
+    }
+    .header__ietem{
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 35px;
+    }
+    .header__ietem:last-child{
+        margin-bottom: 0;
+    }
+    .header__link{
+        font-size: 42px;
+        line-height: 48px;
+    }
+    .header__nav-close{
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 11;
+    }
+    .header__nav-clouse-line{
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: white;
+        top: 50%;
+        
+    }
+    .header__nav-clouse-line:first-child{
+        transform: translateY(-50%) rotate(45deg);
+    }
+    .header__nav-clouse-line:last-child{
+        transform: translateY(-50%) rotate(-45deg);
+    }
+
+    .benefits__card{
+        grid-column: span 3;
+    }
+    .intro{
+        padding-bottom: 50px;
+    }
+    .intro__title{
+        padding-top: 120px;
+        font-size: 32px;
+        line-height: 50px;
+    }
+   
+    .search__form-fild{
+        width: 100%;
+        margin-right: 0;
+        padding-bottom: 10px;
+    }
+    .search__form-fild::placeholder{
+        font-size: 16px; 
+        
+    }
+
+    .top{
+        margin-bottom:80x;
+    }
+    .guids{
+        margin-bottom:20px;
+    }
+    .places__title{
+       margin-bottom: 20px;
+    }
+    .places__top{
+        margin-bottom: 20px;
+    }
+    .places__card-pic{
+        height: 254px;
+    }
+    .places{
+        margin-bottom: 100px;
+    }
+    .guide__pic,.guide__info{
+        grid-column: span 2;
+    }
+    .guide__pic-buttom{
+        grid-row-start: -1;
+    }
+    .top__card{
+        grid-column: span 6;
+    }
+    .footer__item{
+        width: 100%;
+    }
+   
+    .footer__menu-items{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 30px;
+       
+    }
+}
