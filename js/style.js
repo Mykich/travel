@@ -1,29 +1,33 @@
 (function () {
     const header = document.querySelector('.header');
     window.onscroll = () => {
-        if  (window.pageYOffset > 50) {
+        if (window.pageYOffset > 50) {
             header.classList.add('header_activ');
         } else {
             header.classList.remove('header_activ');
         }
     };
-}());
+})();
+
 (function () {
     const header = document.querySelector('.header');
     const videoGid = document.querySelector('.video__element');
     let hideTimeout;
     let isHidden = false;
+
     function checkVideoGidInViewport() {
         const rect = videoGid.getBoundingClientRect();
         return rect.top < window.innerHeight && rect.bottom > 0;
     }
+
     function hideHeader() {
-        if (checkVideoGidInViewport()) {
+        if (window.innerWidth > 800 && checkVideoGidInViewport()) {
             header.style.opacity = '0';
             header.style.pointerEvents = 'none';
             isHidden = true;
         }
     }
+
     function showHeader() {
         if (isHidden) {
             header.style.opacity = '1';
@@ -31,6 +35,7 @@
             isHidden = false;
         }
     }
+
     window.addEventListener('scroll', () => {
         clearTimeout(hideTimeout);
 
@@ -41,7 +46,14 @@
             showHeader(); // Вне блока всегда показываем
         }
     });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth <= 800) {
+            showHeader(); // При изменении размера окна и ширине < 800 всегда показываем header
+        }
+    });
 })();
+
 /*header handler*/
 (function () {
     const burgerItem = document.querySelector('.burger');
