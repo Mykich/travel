@@ -107,3 +107,43 @@
     };
     scrollTo();
 }());
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Скрываем все модальные окна при загрузке
+    document.querySelectorAll(".modal").forEach(modal => {
+        modal.style.display = "none";
+    });
+
+    // Открытие модального окна
+    document.querySelectorAll(".places__card-link").forEach(link => {
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+            let modalId = this.getAttribute("data-modal");
+            let modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = "flex";
+            }
+        });
+    });
+
+    // Закрытие при клике на крестик
+    document.querySelectorAll(".modal__close").forEach(closeBtn => {
+        closeBtn.addEventListener("click", function () {
+            let modal = this.closest(".modal");
+            if (modal) {
+                modal.style.display = "none";
+            }
+        });
+    });
+
+    // Закрытие при клике вне окна
+    document.querySelectorAll(".modal").forEach(modal => {
+        modal.addEventListener("click", function (e) {
+            if (!e.target.closest(".modal__content")) { 
+                this.style.display = "none";
+            }
+        });
+    });
+});
+
+
